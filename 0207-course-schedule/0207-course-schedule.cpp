@@ -1,7 +1,6 @@
 class Solution {
 public:
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-        vector<int>vis(numCourses,0);
         queue<int>q1;
         vector<vector<int>>adj(numCourses);
         vector<int>idg(numCourses,0);
@@ -16,7 +15,6 @@ public:
             if(idg[i]==0)
             {
                 q1.push(i);
-                vis[i]=-1;
                 count++;
             }
         }
